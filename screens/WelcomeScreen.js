@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -6,8 +6,20 @@ import logo from '../assets/images/logo.png';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useCallback } from 'react';
+import { useNavigation } from '@react-navigation/native';
+
+
+
 
 const WelcomeScreen = () => {
+    const navigation = useNavigation();
+
+    useEffect(() => {
+    const timer = setTimeout(() => {
+        navigation.navigate('Onboarding');
+    }, 3000); // 3000 milliseconds = 3 seconds
+        return () => clearTimeout(timer);
+    }, [navigation]);
 
     const [fontsLoaded, fontError] = useFonts({
         'GrandHotel-Regular': require('../assets/fonts/GrandHotel-Regular.ttf'),

@@ -26,7 +26,7 @@ const SignIn = ({navigation}) => {
         </View>
         <View style={{flex: 1, flexDirection: 'row', marginTop: 20, justifyContent: "center", marginHorizontal: 20}}>
             <Image source={line} style={styles.line} resizeMode="contain" />
-            <Text style={{fontFamily: 'Poppins-Bold', color: '#000', marginTop: 20, fontSize: 18, textAlign: 'center', width: 70}}>or sign up using</Text>
+            <Text style={{fontFamily: 'Poppins-Bold', color: '#000', marginTop: 20, fontSize: 18, textAlign: 'center', width: 70}}>or sign up with</Text>
             <Image source={line} style={styles.line} resizeMode="contain" />
         </View>
         <View style={{flex: 1, flexDirection: 'row', marginTop: 20, alignItems: 'center', justifyContent: "center", gap: 40, marginHorizontal: 20}}>
@@ -38,6 +38,18 @@ const SignIn = ({navigation}) => {
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('SignIn')} style={{paddingHorizontal:20, paddingVertical:20, borderRadius: 10, backgroundColor: '#d6d8d8'}}>
                 <Image source={apple} style={{}} resizeMode="contain" />
+            </TouchableOpacity>
+        </View>
+        <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-end', marginEnd: 1, justifyContent: "center", gap: 40,}}>
+            <TouchableOpacity onPress={() => navigation.navigate('SignIn')} style={{}}>
+                <Text style={{fontFamily: 'Poppins-Medium', fontSize: 16, color: '#E94057'}}>
+                    Terms of use
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('SignIn')} style={{}}>
+                <Text style={{fontFamily: 'Poppins-Medium', fontSize: 16, color: '#E94057',}}>
+                    Privacy Policy
+                </Text>
             </TouchableOpacity>
         </View>
         <StatusBar style="auto" />
@@ -52,7 +64,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        paddingVertical: 80
+        paddingTop: 80,
+        paddingBottom: 30,
     },
     logo: {
         marginLeft: 65,

@@ -20,13 +20,13 @@ const SignIn = ({navigation}) => {
                     Continue with email
                 </Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('SignIn')} style={{}}>
+            <TouchableOpacity onPress={() => navigation.navigate('MobileLogin')} style={{}}>
                 <Text style={{fontFamily: 'Poppins-Bold', color: '#E94057', marginTop: 20, fontSize: 18, textAlign: 'center'}}>Use phone number</Text>
             </TouchableOpacity>
         </View>
         <View style={{flex: 1, flexDirection: 'row', marginTop: 20, justifyContent: "center", marginHorizontal: 20}}>
             <Image source={line} style={styles.line} resizeMode="contain" />
-            <Text style={{fontFamily: 'Poppins-Bold', color: '#000', marginTop: 20, fontSize: 18, textAlign: 'center', width: 70}}>or sign up with</Text>
+            <Text style={{fontFamily: 'Poppins-Medium', color: '#000', marginTop: 20, fontSize: 18, textAlign: 'center', width: 70}}>or sign up with</Text>
             <Image source={line} style={styles.line} resizeMode="contain" />
         </View>
         <View style={{flex: 1, flexDirection: 'row', marginTop: 20, alignItems: 'center', justifyContent: "center", gap: 40, marginHorizontal: 20}}>

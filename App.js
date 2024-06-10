@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Onboarding from './screens/Onboarding';
 import SignIn from './screens/SignIn';
+import MobileLogin from './screens/MobileLogin';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -25,6 +26,12 @@ export default function App() {
         <Stack.Screen 
           name="SignIn" 
           component={SignIn}
+          options={{
+            headerShown: false,
+          }} />
+        <Stack.Screen 
+          name="MobileLogin" 
+          component={MobileLogin}
           options={{
             headerShown: false,
           }} />
